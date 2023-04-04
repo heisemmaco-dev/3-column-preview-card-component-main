@@ -1,0 +1,189 @@
+/* Lexend Deca', sans-serif font*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* Big Shoulders Display font*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+:root {
+
+   /*  ### Primary */
+
+--the-firstcard-color: hsl(31, 77%, 52%);
+--the-secondcard-color: hsl(184, 100%, 22%);
+--the-thirdcard-color: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+
+--ff-p: hsla(0, 0%, 100%, 0.75);
+--bg-hd-bt: hsl(0, 0%, 95%);
+
+--ff-: 'Lexend Deca', sans-serif;
+--ff-h: 'Big Shoulders Display', cursive;
+
+--padding: 30px;
+
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* css reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+  html, body {
+    height: 100%;
+  }
+
+  p, h2 {
+    overflow-wrap: break-word;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: var(--bg-hd-bt);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    font-weight: 600;
+    
+  }
+
+  p {
+    color: var(--ff-p);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 35px;
+    
+  }
+
+/* the main styling */
+
+body {
+    background-color: var(--bg-hd-bt);
+    max-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+button {
+  width: 60%; 
+  padding: 18px;
+  border-radius: 30px;
+  font-family: var(--ff-);
+  border: white solid 1px;
+  font-weight: 600;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    gap: 35px;
+    max-width: 375px;
+    
+}
+
+.firstcard {
+ background-color: var(--the-firstcard-color);
+ border-radius: 10px 10px 0 0;
+}
+
+.secondcard {
+    background-color: var(--the-secondcard-color);
+}
+
+.thirdcard {
+    background-color: var(--the-thirdcard-color);
+    border-radius:0 0 10px 10px ;
+}
+
+/* the color style*/
+
+.firstbutton {
+    color: var(--the-firstcard-color);
+}
+
+.secondbutton {
+    color: var(--the-secondcard-color);
+}
+
+.thirdbutton {
+    color: var(--the-thirdcard-color);
+}
+
+button:hover {
+background-color: rgba(255, 255, 255, 0);
+cursor: pointer;
+color: white;
+transition: 0.2s;
+}
+
+/*small screen */
+@media screen and (min-width: 576px) {
+    main {
+      justify-content: center;
+      flex-flow: row wrap;
+      padding: 1rem;
+    }
+  
+    .card {
+      width: min(100%, 400px);
+    }
+}
+
+/* medium screen*/
+
+@media screen and (min-width: 768px) {
+
+  
+    main {
+        justify-content: center;
+        flex-flow: row;
+        padding: 1rem;
+      }
+    
+  .card {
+      width: min(100%, 325px);
+    }
+
+  .firstcard {
+    border-radius: 10px 0 0 10px    ;
+  }
+
+  .thirdcard {
+    border-radius:   0 10px 10px 0 ;
+  }
+   
+  }
+
+  /* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+ 
+  main {
+    flex-flow: row nowrap;
+    justify-content: center;
+    
+  }
+
+  .firstcard {
+    border-radius: 10px 0 0 10px    ;
+  }
+
+  .thirdcard {
+    border-radius:   0 10px 10px 0 ;
+  }
+}
